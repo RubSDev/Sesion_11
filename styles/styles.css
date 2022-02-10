@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(223, 223, 223);
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(102, 182, 244);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: move;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: calc(100% - 100px);
+    left: 0;
+  }
+  60% {
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+  }
+  100% {
+    top: 0;
+    left: calc(100% - 100px);
+  }
+}
